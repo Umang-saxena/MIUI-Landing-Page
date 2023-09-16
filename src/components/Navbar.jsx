@@ -61,7 +61,7 @@ const Navbar = () => {
     setInput(e.target.value);
   }
 
-  
+
   return (
     <AppBar position="sticky">
       <StyledToolBar>
@@ -70,7 +70,7 @@ const Navbar = () => {
         </Typography>
         <BackHandIcon sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
-          <InputBase value={input}  onChange={handleChange} placeholder="Search..." />{" "}
+          <InputBase value={input}  onChange={handleChange} placeholder="Search..." />
         </Search>
         <Icons>
           <Badge badgeContent={0} color="success">
