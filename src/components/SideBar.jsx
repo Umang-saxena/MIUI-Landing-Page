@@ -1,5 +1,6 @@
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+import ModeNightIcon from '@mui/icons-material/ModeNight';
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material";
 import React from "react";
 
 const SideBar = () => {
@@ -9,6 +10,9 @@ const SideBar = () => {
       p={2}
       sx={{ display: { xs: "none", sm: "block" } }}
       >
+        {/* we are wrapping it in different box because we want only content to be fixed..not the whole sidebar */}
+        <Box position="fixed" >
+
       
       <List >
           <ListItem disablePadding>
@@ -67,7 +71,16 @@ const SideBar = () => {
               <ListItemText primary="Profile" />
             </ListItemButton>
           </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#profile" >
+              <ListItemIcon>
+              <ModeNightIcon/> 
+              </ListItemIcon>
+              <Switch  />
+            </ListItemButton>
+          </ListItem>
           </List>
+        </Box>
     </Box>
   );
 };
